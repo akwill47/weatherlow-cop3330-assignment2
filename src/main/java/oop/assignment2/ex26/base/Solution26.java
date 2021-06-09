@@ -6,14 +6,16 @@ import java.util.Scanner;
  */
 public class Solution26 {
     private static final Scanner in = new Scanner(System.in);
-    public void main(String[] args){
+    public static void main(String[] args){
         Input in = new Input();
         PaymentCalculator Calc = new PaymentCalculator();
-        double dailyRate = in.apr();
+
         double balance = in.balance();
+        double dailyRate = in.apr();
         double monthlyPayment = in.monthly();
 
-        Double monthsReq = Calc.calculateMonthsUntilPaidOff(dailyRate,balance,monthlyPayment);
+        double monthsReq = Calc.calculateMonthsUntilPaidOff(dailyRate,balance,monthlyPayment);
+        System.out.printf("It will take you %lf months to pay off this card.",monthsReq);
 
 
     }
