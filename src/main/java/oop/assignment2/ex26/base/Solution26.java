@@ -7,7 +7,14 @@ import java.util.Scanner;
 public class Solution26 {
     private static final Scanner in = new Scanner(System.in);
     public void main(String[] args){
-        double dailyRate = Input.apr();
+        Input in = new Input();
+        PaymentCalculator Calc = new PaymentCalculator();
+        double dailyRate = in.apr();
+        double balance = in.balance();
+        double monthlyPayment = in.monthly();
+
+        Double monthsReq = Calc.calculateMonthsUntilPaidOff(dailyRate,balance,monthlyPayment);
+
 
     }
 }
