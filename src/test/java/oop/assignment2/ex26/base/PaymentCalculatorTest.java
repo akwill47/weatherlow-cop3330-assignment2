@@ -9,4 +9,8 @@ class PaymentCalculatorTest {
     @Test
     void calculateMonthsUntilPaidOff() {
     }
+
+    @Test
+    void testCalculateMonthsUntilPaidOff() {
+    }
 }
