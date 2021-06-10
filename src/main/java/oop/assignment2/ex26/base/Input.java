@@ -8,7 +8,7 @@ public class Input {
         System.out.print("What is the APR on the card (as a percent)? ");
         double apr = in.nextDouble();
         in.nextLine();
-        double  daily = apr/365.0;
+        double  daily = (apr/100.0)/365.0;
         return daily;
     }
     public double balance(){
