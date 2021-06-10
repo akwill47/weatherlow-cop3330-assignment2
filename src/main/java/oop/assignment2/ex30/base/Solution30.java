@@ -6,6 +6,9 @@ import java.util.Scanner;
  */
 public class Solution30 {
     public static void main(String[] args){
+        buildTable build = new buildTable();
+        printTable print = new printTable();
+        print.print(build.math());
 
     }
 }
