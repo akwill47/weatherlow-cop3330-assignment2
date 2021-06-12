@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class calculate {
     public double average(ArrayList<Integer> statsList){
-        double average=0;
+        double average;
         double sum=0;
         for(int i=0;i<statsList.size();i++){
             sum+=statsList.get(i);

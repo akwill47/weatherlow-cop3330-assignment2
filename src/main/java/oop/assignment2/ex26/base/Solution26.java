@@ -15,8 +15,6 @@ public class Solution26 {
         double monthlyPayment = in.monthly();
 
         double monthsReq = Calc.calculateMonthsUntilPaidOff(dailyRate,balance,monthlyPayment);
-        System.out.printf("It will take you %lf months to pay off this card.",monthsReq);
-
-
+        System.out.printf("It will take you %d months to pay off this card.",(int)monthsReq);
     }
 }

@@ -16,9 +16,10 @@ public class build {
                 if(temp.equals("done")){
                     break;
                 }
-                else if(Integer.parseInt(temp)<1){
+                if(Integer.parseInt(temp)<1){
                     break;
                 }
+                else
                 statsList.add(Integer.parseInt(temp));
             }catch(NumberFormatException e){
 
