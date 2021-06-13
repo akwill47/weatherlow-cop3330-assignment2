@@ -7,7 +7,8 @@ import java.util.Random;
 public class build {
     public String password(int length, int special, int numbers){
         getInput in = new getInput();
-        while(length<(special+numbers)){
+        int minLetters = special+numbers;
+        while(minLetters>(length-(special+numbers))){
             System.out.print("Please reput a valid length to ensure an appropriate amount of letters are equal the amount of special characters and numbers: ");
             length = in.getInput();
         }
@@ -20,8 +21,8 @@ public class build {
         int letterCount=0;
         int specialCount=0;
         int numCount=0;
-        int numLetters= length-(special+numbers);
         int randChoice;
+        int numLetters= length-(special+numbers);
         while(true){
             if(count==length){
                 break;
