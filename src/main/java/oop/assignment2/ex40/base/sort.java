@@ -11,7 +11,7 @@ public class sort {
         String tempString;
         String tempString2;
         String tempString3;
-        String tempString4 = new String();
+        String tempString4;
         HashMap<String,String> tempHash;
         HashMap<String,String> tempHashSort;
         int j;
