@@ -1,26 +1,30 @@
 package oop.assignment2.ex39.base;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 public class sort {
     public ArrayList<HashMap<String,String>> adjust(ArrayList<HashMap<String,String>> empList){
-        HashMap<String,String> temp = new HashMap<>();
-        int i=0;
+        HashMap<String,String> temp;
+
         int tempIndex=0;
         String tempString;
-        for(i=0;i<empList.size();i++) {
-            temp=empList.get(i);
-            tempString= temp.get("firstname");
-            for (int j = 0; j < empList.size(); j++) {
-
+        String tempString2;
+        HashMap<String,String> tempHash;
+        for(int i=1;i<empList.size();i++) {
+            temp=empList.get(i-1);
+            tempString= temp.get("lastname");
+            for (int j = i; j < empList.size(); j++) {
                 temp = empList.get(j);
-                if (temp.get("firstname").compareTo(tempString)<0){
+                tempString2 = temp.get("lastname");
+                if ((tempString2.compareTo(tempString))<0){
+                    tempString = tempString2;
                     tempIndex=j;
                 }
             }
-            Collections.swap(empList,i,tempIndex);
+            tempHash = empList.get(tempIndex);
+            empList.set(tempIndex,empList.get(i-1));
+            empList.set(i-1,tempHash);
         }
         return empList;
     }

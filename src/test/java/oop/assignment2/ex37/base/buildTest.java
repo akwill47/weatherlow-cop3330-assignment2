@@ -42,22 +42,4 @@ class buildTest {
         if(numLetters <= length-special-numbers)
             assertEquals(length,actual.length());
     }
-    /*@Test
-    void password_letter_length_wrong() {
-        build create = new build();
-        int length = 5;
-        int special = 2;
-        int numbers = 2;
-        int numLetters = special + numbers;
-        boolean check;
-        String actual = create.password(length,special,numbers);
-
-        if(numLetters < length-special-numbers){
-            check= false;
-            assertFalse(check);
-        }
-        else assertEquals(length,actual.length());
-
-
-    }*/
 }
