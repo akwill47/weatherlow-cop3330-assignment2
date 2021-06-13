@@ -6,6 +6,11 @@ import java.util.Random;
 
 public class build {
     public String password(int length, int special, int numbers){
+        getInput in = new getInput();
+        while(length<(special+numbers)){
+            System.out.print("Please reput a valid length to ensure an appropriate amount of letters are equal the amount of special characters and numbers: ");
+            length = in.getInput();
+        }
         Random r = new Random();
         String[] numList = new String[]{"1","2","3","4","5","6","7","8","9","0"};//10
         String[] specialList = new String[]{"!","@","#","$","%","&"};//6
