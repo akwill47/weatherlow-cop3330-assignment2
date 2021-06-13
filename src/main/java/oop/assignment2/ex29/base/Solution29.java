@@ -8,6 +8,9 @@ public class Solution29 {
         inputCatch call = new inputCatch();
         calc calculate = new calc();
         double years = calculate.calc(call.validate());
+        if(years == 0){
+            System.out.printf("Invalid input for rate");
+        }
         System.out.printf("It will take %d years to double your investment",(int)years);
 
     }
