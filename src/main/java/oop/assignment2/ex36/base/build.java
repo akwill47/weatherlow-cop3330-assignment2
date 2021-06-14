@@ -16,7 +16,7 @@ public class build {
                 if(temp.equals("done")){
                     break;
                 }
-                if(Integer.parseInt(temp)<1){
+                if(Integer.parseInt(temp)<=0){
                     break;
                 }
                 else
